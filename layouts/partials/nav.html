@@ -14,6 +14,12 @@
     </ul>
     {{ with $data.social }}
     <ul class="icons">
+        {{ with .discord }}
+        <li><a href="{{ . }}" class="icon">
+            <span class="label">Discord</span>
+            <i class="fab fa-discord"></i>
+        </a></li>
+        {{ end }}
         {{ with .twitter }}
         <li><a href="{{ . }}" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
         {{ end }}
