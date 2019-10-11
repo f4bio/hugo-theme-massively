@@ -1,9 +1,12 @@
 {
   "name": "hugo-theme-massively",
-  "version": "5.3.1",
+  "version": "5.3.2",
   "description": "HTML5 UP theme Massively for Hugo",
   "scripts": {
-    "hugo-dev": "cd exampleSite && hugo server --themesDir ../.."
+    "build-main-css": "node-sass --output-style compressed ./static/assets/sass/main.scss > ./static/assets/css/main.css",
+    "build-noscript-css": "node-sass --output-style compressed ./static/assets/sass/noscript.scss > ./static/assets/css/noscript.css",
+    "build-styles": "npm run build-main-css && npm run build-noscript-css",
+    "hugo-dev": "npm run build-styles && cd exampleSite && hugo server --themesDir ../.."
   },
   "repository": {
     "type": "git",
