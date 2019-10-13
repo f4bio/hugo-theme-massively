@@ -52,7 +52,7 @@
 
 	@import 'components/row';
 	@import 'components/box';
-	@import 'components/button';
+  @import 'components/button';
 	@import 'components/form';
 	@import 'components/icon';
 	@import 'components/image';
@@ -61,7 +61,7 @@
 	@import 'components/list';
 	@import 'components/section';
 	@import 'components/table';
-	@import 'components/pagination';
+  @import 'components/pagination';
 
 // Layout.
 
@@ -72,3 +72,4 @@
 	@import 'layout/main';
 	@import 'layout/footer';
 	@import 'layout/navPanel';
+

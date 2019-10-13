@@ -10,6 +10,8 @@
 				<!-- Main -->
 					<div id="main">
 
+              {{ partial "squad/index" . }}
+
 						<!-- Post -->
                         <section class="post">
                             <header class="major">
@@ -25,7 +27,7 @@
                             {{ .Content }}
 
                             {{ partial "postcustom" . }}
-                            
+
                             {{ if not (eq .Params.disableComments true) }}
                             {{ template "_internal/disqus.html" . }}
                             {{ end }}

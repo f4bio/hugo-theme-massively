@@ -2,10 +2,17 @@
 {{ $data := index .Site.Data .Site.Language.Lang }}
 <nav id="nav">
   <ul class="links">
-    <li class="active"><a href='{{ "/" | relLangURL }}'>{{ .Site.Title }}</a></li>
+    <li class="active">
+      <a href='{{ "/" | relLangURL }}'>{{ .Site.Title }}</a>
+    </li>
     {{ with $data.contactinfo }}
     <li>
       <a href='{{ "#footer" | relLangURL }}'>{{ i18n "NAV_CONTACT" . }}</a>
+    </li>
+    {{ end }}
+    {{ with $data.squadinfo }}
+    <li>
+      <a href='{{ "#squad" | relLangURL }}'>{{ i18n "NAV_SQUAD" . }}</a>
     </li>
     {{ end }}
     {{ if .IsTranslated }}
@@ -21,7 +28,7 @@
     {{ with .discord}}
     <li>
       <a href="{{ . }}" class="icon">
-        <i class="fab fa-discord"></i>
+        <i class="fab fa-discord fa-lg"></i>
         <span class="label">Discord</span>
       </a>
     </li>

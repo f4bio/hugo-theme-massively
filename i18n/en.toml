@@ -22,6 +22,8 @@
   other = "Continue"
 [NAV_CONTACT]
   other = "Contact"
+[NAV_SQUAD]
+  other = "Squad"
 [PAGINATION_NEXT]
   other = "Next"
 [PAGINATION_PREVIOUS]
