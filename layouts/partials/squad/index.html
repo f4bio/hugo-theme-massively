@@ -1,21 +1,21 @@
 <!-- Squad -->
 {{ $data := index .Site.Data .Site.Language.Lang }}
-<section class="squadinfo">
-    {{ range $data.squadinfo.gk }}
-    <article>
-        <header>
-            {{ if not .Date.IsZero }}
-            <span class="date">{{ .Date.Format (.Site.Params.DateFormat | default "January 2, 2006") }}</span>
-            {{ end }}
-            <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-        </header>
-        {{ if .Params.image }}
-        <a href="{{ .Permalink }}" class="image fit"><img src="{{ .Params.image | relURL }}" alt="" /></a>
-        {{ end }}
-        <p>{{ .Description }}</p>
-        <ul class="actions">
-            <li><a href="{{ .Permalink }}" class="button">{{ $data.post.linktext }}</a></li>
-        </ul>
-    </article>
-    {{ end }}
+<section class="squadinfo" id="squad">
+  <article>
+    <header>
+      {{ .Content }}
+      <h2><a href="/#squad">Squad Information: Coming Soon...</a></h2>
+    </header>
+    <p>
+      Labore sunt nisi dolore duis ut exercitation ipsum ex do fugiat cillum. Est enim eu
+      cupidatat anim labore ex consequat ullamco ex ullamco sit ipsum in
+      aliquip. Est sint aliquip velit ad magna exercitation commodo incididunt.
+      Eiusmod id nulla aliqua laborum. Elit Lorem consequat exercitation
+      occaecat nulla laborum sint ullamco ipsum commodo voluptate excepteur.
+      Occaecat excepteur esse esse esse ad minim culpa fugiat Lorem
+      reprehenderit incididunt velit cillum tempor. Consectetur excepteur labore
+      nostrud labore amet. Irure excepteur excepteur laboris sit et qui sit.
+    </p>
+    Until then, join our <a href="https://discord.gg/dGAbpv">Discord</a>
+  </article>
 </section>

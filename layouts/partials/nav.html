@@ -15,6 +15,11 @@
       <a href='{{ "#squad" | relLangURL }}'>{{ i18n "NAV_SQUAD" . }}</a>
     </li>
     {{ end }}
+    {{ with $data.highlights }}
+    <li>
+      <a href='{{ "#highlights" | relLangURL }}'>{{ i18n "NAV_HIGHLIGHTS" . }}</a>
+    </li>
+    {{ end }}
     {{ if .IsTranslated }}
     {{ range .AllTranslations }}
     <li {{if eq ($.Site.Language) (.Language)}}class="active" {{end}}>
